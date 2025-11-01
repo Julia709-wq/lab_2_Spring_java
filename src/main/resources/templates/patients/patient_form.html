@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пациента</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Добавить нового пациента</h1>
+
+    <form th:action="@{/patients/create_patient}" th:object="${patient}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Введите имя" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="birth_date" class="form-label">Дата рождения</label>
+            <input type="date" th:field="*{birth_date}" class="form-control" id="birth_date" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="diagnosis" class="form-label">Диагноз</label>
+            <input type="text" th:field="*{diagnosis}" class="form-control" id="diagnosis" placeholder="Введите диагноз" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a th:href="@{/patients/patients_list}" class="btn btn-secondary">Отмена</a>
+
+        <a th:if="${patient.id != null}"
+           th:href="@{/patients/delete_patient/{id}(id=${patient.id})}"
+           class="btn btn-danger ms-2"
+           onclick="return confirm('Вы уверены, что хотите удалить этого пациента?');">
+            Удалить пациента
+        </a>
+    </form>
+</div>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

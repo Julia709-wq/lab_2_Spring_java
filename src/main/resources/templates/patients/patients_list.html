@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пациентов</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="table-container mt-4">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Дата рождения</th>
+            <th>Диагноз</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="patient : ${patients}">
+            <td th:text="${patient.id}"></td>
+            <td th:text="${patient.name}"></td>
+            <td th:text="${patient.birth_date}"></td>
+            <td th:text="${patient.diagnosis}"></td>
+            <td>
+                <a th:href="@{/patients/edit_patient/{id}(id=${patient.id})}" class="btn btn-sm btn-warning">Редактировать</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}" class="btn btn-primary">Вернуться на главную</a>
+
+</div>
+</body>
+</html>

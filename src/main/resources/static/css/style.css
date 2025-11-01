@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(135deg, #ffe0f0, #ffb6c1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #d63384;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #ff66a3;
+    border-color: #ff66a3;
+}
+
+.btn-primary:hover {
+    background-color: #ff3399;
+    border-color: #ff3399;
+}
+
+.btn-secondary {
+    background-color: #ffc0cb;
+    border-color: #ffc0cb;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #ff99b3;
+    border-color: #ff99b3;
+}
+
+.btn-sm {
+    background-color: #ffc0cb;
+    border-color: #ffc0cb;
+    color: #fff;
+}
+
+.btn-sm:hover {
+    background-color: #ff99b3;
+    border-color: #ff99b3;
+}
+
+.btn-danger {
+    background-color: #ff4d6d;
+    border-color: #ff4d6d;
+}
+
+.btn-danger:hover {
+    background-color: #e60050;
+    border-color: #e60050;
+}
+
+.table {
+    background-color: rgba(255, 182, 193, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.table th {
+    background-color: #ff66a3;
+    color: white;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-container {
+    background-color: rgba(255, 182, 193, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+}
