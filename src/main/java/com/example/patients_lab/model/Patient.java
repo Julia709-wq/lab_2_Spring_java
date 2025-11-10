@@ -1,4 +1,4 @@
-package com.example.patients_lab;
+package com.example.patients_lab.model;
 
 import jakarta.persistence.*;
 
