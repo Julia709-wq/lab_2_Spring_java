@@ -20,12 +20,14 @@ public class User {
     @Column(nullable = false)
     private Role role = Role.USER;
 
+    public User() {}
 
     public User(String email, String password) {
         this.email = email;
         this.password = password;
         this.role = Role.USER;
     }
+
 
     public Long getId() {return id;}
 

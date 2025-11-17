@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>Главная страница</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">База данных Patients</h1>
+    <h1 class="display-4">Patients DataBase</h1>
 
-    <a th:href="@{/patients/patients_list}" class="btn btn-primary me-2 mb-2">Список пациентов</a>
-    <a th:href="@{/patients/create_patient}" class="btn btn-primary me-2 mb-2">Добавить пациента</a>
+    <div class="mt-4">
+        <a th:href="@{/patients/patients_list}" class="btn btn-primary me-2 mb-2">Список пациентов</a>
+
+        <a sec:authorize="hasAnyRole('ADMIN', 'SUPER_ADMIN')"
+           th:href="@{/patients/create_patient}" class="btn btn-primary me-2 mb-2">Добавить пациента</a>
+
+        <a th:href="@{/login}" class="btn btn-secondary me-2 mb-2">Выйти</a>
+    </div>
 </div>
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>

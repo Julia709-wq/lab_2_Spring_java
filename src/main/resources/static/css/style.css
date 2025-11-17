@@ -111,7 +111,6 @@ h1, h2, h3 {
     border-radius: 8px 8px 0 0;
 }
 
-/* Контейнеры форм */
 .form-container {
     display: none;
 }
@@ -127,7 +126,11 @@ h1, h2, h3 {
 }
 
 /* Стили для форм */
-.auth-form .form-group {
+.auth-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
@@ -196,6 +199,18 @@ h1, h2, h3 {
     background-color: #ffebee;
     color: #e60050;
     border: 1px solid #ffcdd2;
+}
+
+
+.auth-link {
+    color: #d63384;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+    color: #c2185b;
 }
 
 /* Ссылка "Забыли пароль?" */

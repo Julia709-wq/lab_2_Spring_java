@@ -29,7 +29,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Сохранить</button>
-        <a th:href="@{/patients/patients_list}" class="btn btn-secondary">Отмена</a>
+        <a th:href="@{/patients/}" class="btn btn-secondary">Отмена</a>
 
         <a th:if="${patient.id != null}"
            th:href="@{/patients/delete_patient/{id}(id=${patient.id})}"

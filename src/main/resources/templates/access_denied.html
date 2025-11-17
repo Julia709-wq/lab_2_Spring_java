@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Доступ запрещен</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="text-danger">🚫 Доступ запрещен</h1>
+            <p>У вас недостаточно прав для просмотра этой страницы.</p>
+            <a th:href="@{/patients/patients_list}" class="btn btn-primary">Назад</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

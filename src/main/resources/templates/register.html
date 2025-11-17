@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
@@ -13,7 +13,10 @@
         <p>Создайте новый аккаунт</p>
     </div>
 
-    <form id="registerForm" class="auth-form" action="#" method="POST">
+    <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+    <form th:action="@{/register}" th:object="${user}" method="post" class="auth-form">
+
         <div class="form-group">
             <label for="register-username">Имя пользователя:</label>
             <input type="text" id="register-username" name="username" required>
@@ -36,7 +39,7 @@
     </form>
 
     <div class="auth-footer">
-        <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+        <p>Уже есть аккаунт? <a th:href="@{/login}" class="auth-link">Войдите</a></p>
     </div>
 
     <div id="register-message" class="auth-message"></div>
